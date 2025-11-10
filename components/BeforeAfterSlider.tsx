@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
@@ -36,18 +36,18 @@ export default function BeforeAfterSlider() {
     setIsDragging(true)
   }
 
-  const handleMouseMove = (e: React.MouseEvent | MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
     if (!isDragging || !sliderRef.current) return
 
     const rect = sliderRef.current.getBoundingClientRect()
     const x = e.clientX - rect.left
     const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100))
     setSliderPosition(percentage)
-  }
+  }, [isDragging])
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     setIsDragging(false)
-  }
+  }, [])
 
   useEffect(() => {
     if (isDragging) {
@@ -58,7 +58,7 @@ export default function BeforeAfterSlider() {
         document.removeEventListener('mouseup', handleMouseUp)
       }
     }
-  }, [isDragging])
+  }, [isDragging, handleMouseMove, handleMouseUp])
 
   useEffect(() => {
     if (isAutoPlaying) {

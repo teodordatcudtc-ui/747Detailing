@@ -107,7 +107,6 @@ export default function RootLayout({
               '@id': 'https://747detailingclub.ro/#organization',
               name: '747 Detailing Club',
               image: 'https://747detailingclub.ro/og-image.jpg',
-              '@id': 'https://747detailingclub.ro',
               url: 'https://747detailingclub.ro',
               telephone: '+40745313747',
               priceRange: '$$',

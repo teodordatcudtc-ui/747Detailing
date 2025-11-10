@@ -85,7 +85,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-lg text-warm-white/90 leading-relaxed mb-6">
-                "{testimonials[currentIndex].text}"
+                &ldquo;{testimonials[currentIndex].text}&rdquo;
               </p>
               <div>
                 <div className="font-semibold text-warm-white">
