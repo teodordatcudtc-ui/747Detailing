@@ -1,8 +1,5 @@
 import Hero from '@/components/Hero'
-<<<<<<< HEAD
-=======
 import ResultsCarousel from '@/components/ResultsCarousel'
->>>>>>> cb6b33b (Update)
 import ServicesPreview from '@/components/ServicesPreview'
 import CarShowcase from '@/components/CarShowcase'
 import Process from '@/components/Process'
@@ -23,10 +20,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-<<<<<<< HEAD
-=======
       <ResultsCarousel />
->>>>>>> cb6b33b (Update)
       <ServicesPreview />
       <CarShowcase />
       <Process />
