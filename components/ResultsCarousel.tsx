@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useInView } from 'react-intersection-observer'
@@ -53,16 +53,20 @@ export default function ResultsCarousel() {
   // Update visible count based on screen size
   useEffect(() => {
     const updateVisibleCount = () => {
-      if (window.innerWidth >= 1024) {
-        setVisibleCount(3) // Desktop: 3 images
-      } else {
-        setVisibleCount(2) // Mobile/Tablet: 2 images
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth >= 1024) {
+          setVisibleCount(3) // Desktop: 3 images
+        } else {
+          setVisibleCount(2) // Mobile/Tablet: 2 images
+        }
       }
     }
 
     updateVisibleCount()
-    window.addEventListener('resize', updateVisibleCount)
-    return () => window.removeEventListener('resize', updateVisibleCount)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', updateVisibleCount)
+      return () => window.removeEventListener('resize', updateVisibleCount)
+    }
   }, [])
 
   const nextSlide = () => {
