@@ -40,12 +40,6 @@ export default function Hero() {
   }
 
   return (
-<<<<<<< HEAD
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 carbon-pattern opacity-30" />
-      
-=======
     <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-20 lg:pt-0">
       {/* Background Pattern */}
       <div className="absolute inset-0 carbon-pattern opacity-30" />
@@ -65,7 +59,6 @@ export default function Hero() {
         </div>
       </div>
       
->>>>>>> cb6b33b (Update)
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
@@ -130,11 +123,7 @@ export default function Hero() {
                 <div className="text-sm text-warm-white/70">Rating mediu</div>
               </div>
               <div>
-<<<<<<< HEAD
-                <div className="text-2xl sm:text-3xl font-display font-bold text-gold">10+</div>
-=======
                 <div className="text-2xl sm:text-3xl font-display font-bold text-gold">2+</div>
->>>>>>> cb6b33b (Update)
                 <div className="text-sm text-warm-white/70">Ani experiență</div>
               </div>
             </motion.div>
@@ -145,11 +134,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-<<<<<<< HEAD
-            className="relative h-[350px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-premium"
-=======
             className="hidden lg:block relative h-[350px] sm:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-premium"
->>>>>>> cb6b33b (Update)
           >
             <AnimatePresence mode="wait">
               {heroImages.map((img, index) => {
