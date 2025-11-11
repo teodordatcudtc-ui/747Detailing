@@ -28,11 +28,7 @@ export default function StickyBookingBar() {
   if (!isVisible) return null
 
   return (
-<<<<<<< HEAD
-    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-carbon/95 backdrop-blur-md border-t border-metallic shadow-premium">
-=======
     <div className="hidden fixed bottom-0 left-0 right-0 z-40 bg-carbon/95 backdrop-blur-md border-t border-metallic shadow-premium">
->>>>>>> cb6b33b (Update)
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between space-x-3">
           <Link
